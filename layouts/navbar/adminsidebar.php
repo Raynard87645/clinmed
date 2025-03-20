@@ -26,7 +26,7 @@
       
 
       <ul class="menu-links">
-      <li class="nav-link">
+      <li class="nav-link p-0">
       
       <a  >
       <i class='bx bx-user icon'></i>
@@ -34,41 +34,41 @@
       </a>
       </li>
       <hr>
-        <li class="nav-link">
+        <li class="nav-link p-0">
           <a href="/views/admin/dashboard.php">
             <i class='bx bx-home-alt icon'></i>
             <span class="text nav-text">Dashboard</span>
           </a>
         </li>
 
-        <li class="nav-link">
+        <li class="nav-link p-0">
           <a href="/views/admin/patients.php">
             <i class='bx bx-user-pin icon'></i>
             <span class="text nav-text">Patients</span>
           </a>
         </li>
 
-        <li class="nav-link">
+        <li class="nav-link p-0">
           <a href="/views/admin/doctors.php">
             <i class='bx bx-plus-medical icon'></i>
             <span class="text nav-text">Doctor</span>
           </a>
         </li>
 
-        <li class="nav-link">
+        <li class="nav-link p-0">
           <a href="/views/admin/queue.php">
             <i class='bx bx-add-to-queue icon'></i>
             <span class="text nav-text">Queue</span>
           </a>
         </li>
 
-        <li class="nav-link">
+        <li class="nav-link p-0">
           <a href="/views/admin/appointments.php">
             <i class='bx bxs-calendar icon'></i>
             <span class="text nav-text">Appointments</span>
           </a>
         </li>
-        <li class="nav-link">
+        <li class="nav-link p-0">
           <a href="/views/admin/management/users.php">
             <i class='bx bxs-user-detail icon'></i>
             <span class="text nav-text">Manage Users</span>

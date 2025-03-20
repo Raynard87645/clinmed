@@ -9,21 +9,8 @@ $lilo ="";
 requireLogin();
 
 
-// $query= "SELECT COUNT(*) FROM patients" ;
-// $check = mysqli_query($conn, $query);
-// $numuser= mysqli_fetch_array($check);
-
-// $query= "SELECT COUNT(*) FROM queue1" ;
-// $qcheck = mysqli_query($conn, $query);
-// $que= mysqli_fetch_array($qcheck);
 
 
-// Get the current date
-$date = getdate();
-// // Extract day, month, and year
-$day = $date['mday'];
-$month = $date['mon'];
-$year = $date['year'];
 
 // // Display the results
 $mode = "Dark mode"
@@ -32,7 +19,7 @@ $mode = "Dark mode"
 
 <?php include "../../layouts/navbar/adminsidebar.php"; ?>
 
-<section class="home">
+<div class="home">
   <div class="text">Appointments 
       <div class="ti">
         <t id="currtime"> |</t>
@@ -41,29 +28,182 @@ $mode = "Dark mode"
         <t id="month" ></t>
         <t id="year" ></t>
       </div>
-    <section class="page-content">
-        <article class="board">   
-            <form class="form">
-              <div class="form-element">
-                <label for="start_date"><?php echo "$day / $month / $year" ?></label>
-                
-              </div>
-              <div class="form-element">
-                <label for="end_date">WELCOME</label>
-                
-              </div>
-              <div class="form-element">
-                <label for="status"></label>
-                
-              </div>
-              
-
-              
-            </form>
-        </article>        
-    </section>
   </div>
-</section>
+  <section class="px-5">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card quick-card large-rounded">
+          <div class="card-body">
+            <div class="d-flex quick-display-box-1">
+              <i class='bx bx-home-alt icon grey'></i>
+              <div>
+                <h5 class="card-title"><strong>324</strong></h5>
+                <p class="card-text">Total booking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card quick-card large-rounded">
+          <div class="card-body">
+            <div class="d-flex quick-display-box-1">
+              <i class='bx bxs-calendar icon grey'></i>
+              <div>
+                <h5 class="card-title"><strong>314</strong></h5>
+                <p class="card-text">Success booking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card quick-card large-rounded">
+          <div class="card-body">
+            <div class="d-flex quick-display-box-1">
+              <i class='bx bx-plus-medical icon grey'></i>
+              <div>
+                <h5 class="card-title"><strong>12</strong></h5>
+                <p class="card-text">Cancled booking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card quick-card large-rounded">
+          <div class="card-body">
+            <div class="d-flex quick-display-box-1">
+              <i class='bx bx-user-pin icon grey'></i>
+              <div>
+                <h5 class="card-title"><strong>36764</strong></h5>
+                <p class="card-text">Total Revenue.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-7">
+        <div class="card display-table large-rounded mt-4">
+          <div class="card-body">
+              <div class="d-flex justify-content-between">
+              <h5>Upcoming Appointments</h5>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Action
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card display-table large-rounded mt-4">
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card display-table large-rounded mt-4"></div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card display-table large-rounded mt-4">
+          <div class="card-body">
+              <div class="d-flex justify-content-between">
+              <h5>Prescriptions</h5>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Action
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
 
 <script  src="<?php echo '/';?>../public/js/time.js"></script>
 <script type="text/javascript">
