@@ -139,7 +139,7 @@ ol, ul {
 }
 header .image-text .name {
   margin-top: 2px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -207,6 +207,10 @@ body.dark .sidebar header .toggle {
   font-weight: 500;
   transition: var(--tran-05);
 }*/
+.image-text a {
+  text-decoration: none;
+}
+
 .sidebar li a {
   list-style: none;
   height: 100%;

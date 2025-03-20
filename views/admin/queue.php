@@ -1,8 +1,8 @@
 <?php
-require_once "../../config.php";
-require_once "../../config/database.php";
-require_once "../../includes/auth.php";
-include "../../layouts/admin.php";
+require_once "config.php";
+require_once "config/database.php";
+require_once "includes/auth.php";
+include "layouts/admin.php";
 $lilo ="";
 
 //ensure only logged in Session can view this page
@@ -29,7 +29,6 @@ $mode = "Dark mode"
 ?>
 <!-- partial:index.partial.html -->
 
-<?php include "../../layouts/navbar/adminsidebar.php"; ?>
 
 <section class="home">
   <div class="text">Dashboard 

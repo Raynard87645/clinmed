@@ -12,15 +12,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
             <li class="nav-item">
-              <a class="nav-link <?php  echo basename($_SERVER['PHP_SELF']) == 'index.php' ?'active' :'' ?>" aria-current="page" href="/">Home</a>
+              <a class="nav-link <?php  echo $_SERVER['REQUEST_URI'] == '/' ?'active' :'' ?>" aria-current="page" href="/">Home</a>
             </li>
             <?php if($_SESSION['username']){ ?>
             <li class="nav-item">
-              <a class="nav-link  <?php  echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ?'active' :'' ?>" href="/views/admin/dashboard.php">Dashboard</a>
+              <a class="nav-link  <?php  echo $_SERVER['REQUEST_URI'] == '/admin/dashboard' ?'active' :'' ?>" href="/admin/dashboard">Dashboard</a>
             </li>
             <?php } ?>
             <li class="nav-item">
-              <a class="nav-link  <?php  echo basename($_SERVER['PHP_SELF']) == 'contact.php' ?'active' :'' ?>" href="/views/contact.php">Contact</a>
+              <a class="nav-link  <?php  echo $_SERVER['REQUEST_URI'] == '/contact' ?'active' :'' ?>" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -30,7 +30,7 @@
           </div>
         <?php } else { ?>
           <div class="navbar-text">
-              <a href="/views/auth/login.php" class="btn btn-primary ms-3">Login</a>
+              <a href="login" class="btn btn-primary ms-3">Login</a>
           </div>
         <?php } ?>
     </div>

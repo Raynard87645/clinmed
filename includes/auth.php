@@ -7,13 +7,15 @@ function isLoggedIn() {
 
 function requireLogin() {
     if (!isLoggedIn()) {
-        header('Location: ../views/auth/login.php');
+        header('Location: /login');
         exit();
     }
 }
 
 function login($username, $password) {
     global $conn;
+    global $errors;
+
   
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
     if ($stmt === false) {
@@ -38,12 +40,14 @@ function login($username, $password) {
             return true;
         }
     } else {
-        array_push($errors, "No user found with email: $username");
+        // array_push($errors, "No user found with email: $username");
+        array_push($errors, "Wrong username/password combination");  
     }
 
     $stmt->close();
     $conn->close();
     return false;
+
 }
 
 
@@ -83,7 +87,7 @@ function register($firstname, $lastname, $username, $email, $password_1, $passwo
 
 function logout() {
     session_destroy();
-    header('Location: ../');
+    header('Location: /');
     exit();
 }
 ?>

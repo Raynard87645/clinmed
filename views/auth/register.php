@@ -1,10 +1,10 @@
 
 <?php 
-    require_once "../../config.php";
-    require_once "../../config/database.php";
-    require_once "../../includes/auth.php";
+    require_once "config.php";
+    require_once "config/database.php";
+    require_once "includes/auth.php";
     // require_once "../../errors.php";
-    include "../../layouts/auth.php";
+    include "layouts/auth.php";
 
     $errors = [];
 
@@ -31,7 +31,7 @@
   
 
         if (count($errors) == 0 && register($firstname, $lastname, $username, $email, $password_1, $password_2, $title)) {
-            header('Location: ../admin/dashboard.php');
+            header('Location: /admin/dashboard.php');
             exit();
         } else {
             array_push($errors, "Wrong username/password combination");         
@@ -47,7 +47,7 @@
 	<div class="screen">
 	<div class="screen__content">
 	<form class="login" method="post" action="register.php">
-  <?php include('errors.php'); ?>
+        <?php include('errors.php'); ?>
 		<div class="login__field">    
 			<i class="login__icon fas fa-user"></i>
 			<input type="text" class="login__input" 
@@ -95,7 +95,7 @@
 				</button>				
 </form>
 	<div class="social-login">
-	<h3>Already a member?<br><a href="login.php">Login</a></h3>
+	<h3>Already a member?<br><a href="/login">Login</a></h3>
 				<div class="social-icons">
 					<a href="#" class="social-login__icon fab fa-instagram"></a>
 					<a href="#" class="social-login__icon fab fa-facebook"></a>

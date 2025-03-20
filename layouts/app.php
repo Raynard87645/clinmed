@@ -19,7 +19,7 @@
         include "navbar/app.php"; 
         include basename($_GET['page']).'.php'; 
       ?>
-
+        
   </main>
   
   

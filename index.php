@@ -1,7 +1,4 @@
 <?php
-  require_once "includes/auth.php";
-  include "./layouts/app.php"
+  // require_once __DIR__."config.php";
+  require_once "routes/web.php";
 ?>
-
-    
-<?php include "landing.php" ?>

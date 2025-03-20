@@ -1,7 +1,7 @@
 <?php 
-    include "../config.php";
-    include "../config/database.php";
-    include "../layout/app.php"; 
+    include "/../config.php";
+    include "/../config/database.php";
+    include "/../layout/app.php"; 
 
     $sqlFile = __DIR__.'/data.sql';
     if (!file_exists($sqlFile)) {
